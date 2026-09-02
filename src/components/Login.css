@@ -1,0 +1,120 @@
+.login {
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.login_container {
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}
+.login_container > h1 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.login_container > form > h4 {
+    margin-bottom: 5px;
+}
+.login_container > form > input {
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    width: 98%;
+}
+.login_container > p {
+    margin-top: 15px;
+    font-size: 12px;
+}
+.login_signInButton {
+    background: #f0c14b;
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    cursor: pointer;
+}
+.login_signInButton:hover {
+    background: #e2b33c;
+}
+.login_registerButton {
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: darkgray;
+    cursor: pointer;
+}
+.login_registerButton:hover {
+    background: #f7f7f7;
+}
+.login_footer {
+    width: 100%;
+  max-width: 340px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.login_footer_links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  white-space: nowrap;
+}
+
+.login_footer_links a {
+  color: #0066c0;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.login_footer_links a:hover {
+  text-decoration: underline;
+}
+
+.login_footer_copyright {
+  margin-top: 25px;
+  color: #555;
+  font-size: 11px;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .login {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .login_container {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .login_footer {
+    max-width: 100%;
+  }
+
+  .login_footer_links {
+    gap: 8px;
+  }
+}

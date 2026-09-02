@@ -1,0 +1,375 @@
+.header {
+  font-family: Arial, sans-serif;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header_logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+.header_location {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 8px 9px;
+  margin: 0 2px;
+  height: 40px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.header_location:hover,
+.header_option:hover,
+.header_optionBasket:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+}
+.location_icon {
+  font-size: 18px !important;
+  margin-right: 3px;
+}
+.location_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.location_one {
+  font-size: 12px;
+  line-height: 14px;
+}
+.location_two {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+}
+.header_search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 38px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+.header_search:focus-within {
+  border: 3px solid #ff9900;
+}
+.header_searchDropdownWrapper {
+  position: relative;
+  height: 100%;
+}
+.header_searchDropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  height: 100%;
+  width: 60px;
+  background-color: #e6e6e6;
+  border: none;
+  border-right: 1px solid #ddd;
+  padding: 0 18px 0 4px;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  font-size: 13px;
+  outline: none;
+}
+.header_searchDropdown:hover {
+  background-color: #d5d5d5;
+}
+.header_searchDropdown option {
+  background-color: white;
+  color: #333;
+}
+.searchDropdown_icon {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+  pointer-events: none;
+  font-size: 18px !important;
+}
+.header_input {
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.search_icon {
+  padding: 7px;
+  height: 24px !important;
+  width: 24px !important;
+  background-color: #febd69;
+  color: #111;
+  cursor: pointer;
+}
+.search_icon:hover {
+  background-color: #f3a847;
+}
+.header_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.header_navLink {
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header_navLink:visited {
+  color: white;
+}
+.header_option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 8px 9px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+.header_optionOne {
+  font-size: 12px;
+  line-height: 18px;
+}
+.header_optionTwo {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.header_account {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.accountDropdown_icon {
+  font-size: 18px !important;
+  vertical-align: middle;
+  margin-left: 0;
+}
+.account_dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 380px;
+  background-color: white;
+  color: #111;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 200;
+  box-sizing: border-box;
+  animation: accountDropdownFade 0.2s ease-in;
+}
+
+@keyframes accountDropdownFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.account_dropdown_top {
+  text-align: center;
+}
+.account_signin {
+  width: 220px;
+  height: 34px;
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 7px;
+  color: #111;
+  font-size: 13px;
+  cursor: pointer;
+}
+.account_signin:hover {
+  background-color: #f7ca00;
+}
+.account_new {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #555;
+}
+.account_new a {
+  color: #007185;
+  text-decoration: none;
+}
+.account_new a:hover {
+  color: #c45500;
+  text-decoration: underline;
+}
+.account_divider {
+  height: 1px;
+  background-color: #e7e7e7;
+  margin: 18px 0;
+}
+.account_dropdown_columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+}
+.account_column {
+  min-width: 0;
+}
+.account_column h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.account_link {
+  display: block;
+  color: #444;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+}
+.account_link:hover {
+  color: #c45500;
+  text-decoration: underline;
+}
+.account_info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.account_label {
+  font-size: 12px;
+  color: #666;
+}
+.account_email {
+  font-size: 14px;
+  font-weight: 600;
+  word-break: break-word;
+}
+.account_signout {
+  width: 100%;
+  height: 34px;
+  background-color: #f0f2f2;
+  border: 1px solid #adb1b8;
+  border-radius: 8px;
+  color: #111;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.account_signout:hover {
+  background-color: #e3e6e6;
+}
+.header_optionBasket {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 8px 9px;
+  height: 40px;
+  margin-left: 2px;
+  margin-right: 5px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.header_basketCount {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #f08804;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  .header {
+    height: auto;
+    min-height: 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 60px 45px;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+  .header_logo {
+    width: 75px;
+    margin: 0 8px;
+  }
+  .header_location {
+    display: none;
+  }
+  .header_search {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    height: 38px;
+    margin: 3px 0;
+  }
+  .header_nav {
+    grid-column: 2;
+    grid-row: 1;
+    height: 60px;
+  }
+  .header_account {
+    display: flex;
+  }
+  .header_account .header_option {
+    margin: 0;
+    padding: 8px 5px;
+  }
+  .header_account .header_optionOne {
+    font-size: 10px;
+  }
+  .header_account .header_optionTwo {
+    font-size: 12px;
+  }
+  .account_dropdown {
+    position: fixed;
+    top: 60px;
+    right: 8px;
+    width: calc(100vw - 16px);
+    max-width: 380px;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  .header_navLink:first-of-type {
+    display: none;
+  }
+  .header_optionBasket {
+    margin: 0;
+    padding: 8px;
+  }
+  .header_searchDropdown {
+    width: 55px !important;
+    font-size: 12px;
+  }
+  .header_input {
+    min-width: 0;
+    font-size: 14px;
+  }
+  .search_icon {
+    flex-shrink: 0;
+  }
+}
