@@ -110,7 +110,7 @@ const Login = () => {
         </div>
 
         <p className="login_footer_copyright">
-          © 2026, Nompilo Shabangu Amazon Clone
+          © 2026 Nompilo Shabangu Amazon Clone. All rights reserved.
         </p>
       </div>
     </div>

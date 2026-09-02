@@ -135,7 +135,7 @@ const Home = () => {
               See more
             </Link>
           </div>
-          
+
           <div className="category_tile">
             <h2>Books</h2>
 
@@ -180,9 +180,48 @@ const Home = () => {
         </div>
 
         <div className="home_products">
-          <h2>Best Sellers</h2>
+          <h2>Today's Deals</h2>
           <Products />
         </div>
+        <footer className="home_footer">
+          <div className="footer_back_to_top">
+            <a href="#">Back to top</a>
+          </div>
+          <div className="footer_columns">
+            <div className="footer_column">
+              <h3>Get to Know Us</h3>
+               <Link to="/">About Us</Link>
+              <Link to="/">Careers</Link>
+              <Link to="/">Contact Us</Link>
+            </div>
+            <div className="footer_column">
+              <h3>Make Money with Us</h3>
+              <Link to="/products">Sell Products</Link>
+              <Link to="/products">Advertise Your Products</Link>
+              <Link to="/products">Become an Affiliate</Link>
+            </div>
+            <div className="footer_column">
+              <h3>Amazon Payment Products</h3> 
+              <Link to="/">Amazon Pay</Link>
+              <Link to="/">Payment Methods</Link>
+              <Link to="/">Gift Cards</Link>
+            </div>
+            <div className="footer_column">
+              <h3>Let Us Help You</h3>
+              <Link to="/orders">Your Orders</Link>
+              <Link to="/checkout">Your Cart</Link>
+              <Link to="/login">Your Account</Link>
+            </div>
+          </div>
+          <div className="footer_bottom">
+            <img
+              src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+              alt="Amazon logo"
+              className="footer_logo"
+            />
+            <p>© 2026 Nompilo Shabangu Amazon Clone. All rights reserved.</p>
+          </div>
+        </footer>
       </div>
     </div>
   );
