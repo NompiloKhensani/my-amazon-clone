@@ -43,7 +43,8 @@ const Payment = () => {
   const handleSubmit = async (e) => {
   e.preventDefault();
 
-  if (!stripe || !elements || !clientSecret) {
+  if (!user) {
+    setError("Please sign in before placing your order.");
     return;
   }
 
@@ -51,41 +52,25 @@ const Payment = () => {
   setError(null);
 
   try {
-    const cardElement = elements.getElement(CardElement);
+    const orderId = Date.now().toString();
 
-    const { error, paymentIntent } = await stripe.confirmCardPayment(
-      clientSecret,
+    await setDoc(
+      doc(db, "user", user.uid, "orders", orderId),
       {
-        payment_method: {
-          card: cardElement,
-        },
+        basket: basket,
+        amount: Math.round(getBasketTotal(basket) * 100),
+        created: new Date(),
       }
     );
 
-    if (error) {
-      setError(error.message);
-      setProcessing(false);
-      return;
-    }
+    setSucceeded(true);
+    setProcessing(false);
 
-    if (paymentIntent.status === "succeeded") {
-      await setDoc(
-        doc(db, "user", user.uid, "orders", paymentIntent.id),
-        {
-          basket: basket,
-          amount: paymentIntent.amount,
-          created: paymentIntent.created,
-        }
-      );
+    emptyBasket();
 
-      setSucceeded(true);
-      setProcessing(false);
-
-      emptyBasket();
-
-      navigate("/orders");
-    }
+    navigate("/orders");
   } catch (err) {
+    console.error(err);
     setError(err.message);
     setProcessing(false);
   }
@@ -147,7 +132,7 @@ const Payment = () => {
                   thousandSeparator={true}
                   prefix={"R"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                <button disabled={processing || succeeded}>
                   <span>{processing ? <p>Processing...</p> : "Pay Now"}</span>
                 </button>
               </div>
