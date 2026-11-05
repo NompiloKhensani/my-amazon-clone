@@ -46,9 +46,9 @@ npm run dev
 
 http://localhost:5173
 
-## 👩🏽‍💻 Author
+## Author
 
-**Nompilo Shabangu** - Pretoria, South Africa
+**Nompilo Shabangu** - Full Stack Developer, Pretoria, South Africa
 
 - GitHub: [@NompiloKhensani](https://github.com/NompiloKhensani)
 - LinkedIn: [Nompilo Shabangu](https://www.linkedin.com/in/nompilo-shabangu/)
